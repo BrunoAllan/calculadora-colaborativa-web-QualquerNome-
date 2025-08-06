@@ -4,6 +4,44 @@ class Program
 {
     static void Main()
     {
+         bool continuar = true;
+
+        while (continuar)
+        {
+            Console.WriteLine("\n=== CALCULADORA ===");
+            Console.WriteLine("Escolha uma opção:");
+            Console.WriteLine("1 - Soma");
+            Console.WriteLine("2 - Subtração");
+            Console.WriteLine("3 - Multiplicação");
+            Console.WriteLine("4 - Divisão");
+            Console.WriteLine("5 - Sair");
+
+            Console.Write("Opção: ");
+            string opcao = Console.ReadLine();
+
+            switch (opcao)
+            {
+                case "1":
+                    Soma();
+                    break;
+                case "2":
+                    Subtracao();
+                    break;
+                case "3":
+                    Multiplicacao();
+                    break;
+                case "4":
+                    Divisao();
+                    break;
+                case "5":
+                    continuar = false;
+                    Console.WriteLine("Saindo...");
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida, tente novamente.");
+                    break;
+            }
+        }
 
         
     }
